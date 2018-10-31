@@ -1,0 +1,205 @@
+@font-face {
+    font-family: myFont;
+    src: url("../font/Weston Free.otf")
+}
+body {
+	background-image: url("../img/background.jpeg");
+	background-repeat: repeat;
+}
+
+#positioner {
+	margin: 0 auto;
+	text-align: center;
+}
+h1 {
+	font-family: myFont;
+	font-size: 35px;
+	font-weight: bolder;
+}
+p {
+	height: 5px;
+	font-size: 16pt;
+	font-family: myFont, serif;
+}
+#difficulty {
+	width: 150px;
+	position: relative;
+	left: 800px;
+	font-weight: bold;
+	font-family: myFont;
+}
+#info {
+	position: relative;
+	font-family: myFont;
+	top: -71px;
+}
+form {
+	width: 40px;
+	position: relative;
+	left: 850px;
+}
+select {
+	width: 40px;
+	height: 25px;
+
+}
+#restart {
+	margin: 0 auto;
+	position: relative;
+	top: -50px;
+	width: 120px;
+	height: 38px;
+	padding-top: 10px;
+
+	background-color: #6296eb;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16pt;
+	letter-spacing: 3px;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px 0px 20px 3px #6666EB;
+}
+#game_box {
+	margin: 0 auto;
+	position: relative;
+	top: -70px;
+	width: 310px;
+	height: 310px;
+}
+.pieces {
+	width: 75px;
+	height: 75px;
+	border: 1px solid;
+
+	background-image: url("../img/image1.jpeg");
+	border-width: 1px;
+	border-color: grey;
+	z-index: 0;
+	position: absolute;
+
+	transition: all 500ms ease-out;
+	--webkid--transition: all 500ms ease-out;
+}
+.empty {
+	width: 75px;
+	height: 75px;
+	/*border: 1px solid;*/
+}
+.pieces:hover {
+	transform: scale(1.1);
+	--webkid--transform: scale(1.1);
+	transition: 300ms ease-out;
+	--webkid--transition: 300ms ease-out;
+	z-index:1;
+}
+#origin1 {
+	background-position: 0px 0px;
+}
+#origin2 {
+	background-position: -75px 0px;
+}
+#origin3 {
+	background-position: -150px 0px;
+}
+#origin4 {
+	background-position: -225px 0px;
+}
+#origin5 {
+	background-position: 0px -75px;	
+}
+#origin6 {
+	background-position: -75px -75px;
+}
+#origin7 {
+	background-position: -150px -75px;
+}
+#origin8 {
+	background-position: -225px -75px;
+}
+#origin9 {
+	background-position: 0px -150px;
+}
+#origin10 {
+	background-position: -75px -150px;
+}
+#origin11 {
+	background-position: -150px -150px;
+}
+#origin12 {
+	background-position: -225px -150px;
+}
+#origin13 {
+	background-position: 0px -225px;
+}
+#origin14 {
+	background-position: -75px -225px;
+}
+#origin15 {
+	background-position: -150px -225px;
+}
+
+.pos1 {
+	left: 0px;
+	top: 0px;
+}
+
+.pos2 {
+	left: 77px;
+	top: 0px;
+}
+.pos3 {
+	left: 154px;
+	top: 0px;
+}
+.pos4 {
+	left: 231px;
+	top: 0px;
+}
+.pos5 {
+	left: 0px;
+	top: 77px;
+}
+.pos6 {
+	left: 77px;
+	top: 77px;
+}
+.pos7 {
+	left: 154px;
+	top: 77px;
+}
+.pos8 {
+	left: 231px;
+	top: 77px;
+}
+.pos9 {
+	left: 0px;
+	top: 153px;
+}
+.pos10 {
+	left: 77px;
+	top: 153px;
+}
+.pos11 {
+	left: 154px;
+	top: 153px;
+}
+.pos12 {
+	left: 231px;
+	top: 153px;
+}
+.pos13 {
+	left: 0px;
+	top: 230px;
+}
+.pos14 {
+	left: 77px;
+	top: 230px;
+}
+.pos15 {
+	left: 154px;
+	top: 230px;
+}
+.pos16 {
+	left: 231px;
+	top: 230px;
+}

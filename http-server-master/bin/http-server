@@ -1,0 +1,187 @@
+#!/usr/bin/env node
+
+'use strict';
+
+var colors     = require('colors/safe'),
+    os         = require('os'),//核心包成员（要看！）
+    httpServer = require('../lib/http-server'),
+    portfinder = require('portfinder'),
+    opener     = require('opener'),
+    argv       = require('optimist')
+      .boolean('cors')//用布尔值解析
+      .argv;
+
+var ifaces = os.networkInterfaces();//获取操作系统网卡
+
+if (argv.h || argv.help) {//如果命令行参数中有.h或者有.help
+  //那么在命令行输出这些控制
+  console.log([
+    'usage: http-server [path] [options]',
+    '',
+    'options:',
+    '  -p           Port to use [8080]',
+    '  -a           Address to use [0.0.0.0]',
+    '  -d           Show directory listings [true]',
+    '  -i           Display autoIndex [true]',
+    '  -g --gzip    Serve gzip files when possible [false]',
+    '  -e --ext     Default file extension if none supplied [none]',
+    '  -s --silent  Suppress log messages from output',
+    '  --cors[=headers]   Enable CORS via the "Access-Control-Allow-Origin" header',
+    '                     Optionally provide CORS headers list separated by commas',
+    '  -o [path]    Open browser window after starting the server',
+    '  -c           Cache time (max-age) in seconds [3600], e.g. -c10 for 10 seconds.',
+    '               To disable caching, use -c-1.',
+    '  -U --utc     Use UTC time format in log messages.',
+    '',
+    '  -P --proxy   Fallback proxy if the request cannot be resolved. e.g.: http://someurl.com',
+    '',
+    '  -S --ssl     Enable https.',
+    '  -C --cert    Path to ssl cert file (default: cert.pem).',
+    '  -K --key     Path to ssl key file (default: key.pem).',
+    '',
+    '  -r --robots  Respond to /robots.txt [User-agent: *\\nDisallow: /]',
+    '  --no-dotfiles  Do not show dotfiles',
+    '  -h --help    Print this list and exit.'
+  ].join('\n'));
+  process.exit();
+}
+//输入参数 || 默认值
+var port = argv.p || parseInt(process.env.PORT, 10),
+    host = argv.a || '0.0.0.0',
+    ssl = !!argv.S || !!argv.ssl,
+    proxy = argv.P || argv.proxy,
+    utc = argv.U || argv.utc,
+    logger;
+
+//如果不是silent
+if (!argv.s && !argv.silent) {
+  logger = {
+    info: console.log,
+    request: function (req, res, error) {
+      //先看看时间
+      var date = utc ? new Date().toUTCString() : new Date();
+      //再看看有没有error
+      if (error) {
+        logger.info(
+          '[%s] "%s %s" Error (%s): "%s"',//类c的输出语句
+          date, colors.red(req.method), colors.red(req.url),
+          colors.red(error.status.toString()), colors.red(error.message)
+        );
+      }
+      else {
+        logger.info(
+          '[%s] "%s %s" "%s"',
+          date, colors.cyan(req.method), colors.cyan(req.url),
+          req.headers['user-agent']
+        );
+      }
+    }
+  };
+}
+else if (colors) {
+  logger = {
+    info: function () {},
+    request: function () {}
+  };
+}
+//看给没给port
+//如果没给，默认8080，如果8080占用，找8082，一直往上
+if (!port) {
+  portfinder.basePort = 8080;
+  portfinder.getPort(function (err, port) {
+    if (err) { throw err; }
+    listen(port);
+  });
+}
+//如果给了，
+else {
+  listen(port);
+}
+
+function listen(port) {
+  var options = {
+    root: argv._[0],//argv的一个属性，无前缀参数的第一个
+    cache: argv.c,
+    showDir: argv.d,
+    autoIndex: argv.i,
+    gzip: argv.g || argv.gzip,
+    robots: argv.r || argv.robots,
+    ext: argv.e || argv.ext,
+    logFn: logger.request,
+    proxy: proxy,//
+    showDotfiles: argv.dotfiles
+  };
+//是否处理跨域调用
+  if (argv.cors) {
+    options.cors = true;
+    if (typeof argv.cors === 'string') {
+      options.corsHeaders = argv.cors;
+    }
+  }
+//
+  if (ssl) {
+    options.https = {
+      cert: argv.C || argv.cert || 'cert.pem',
+      key: argv.K || argv.key || 'key.pem'
+    };
+  }
+//终于拿到server
+  var server = httpServer.createServer(options);
+//开始调用js中提供的方法
+  server.listen(port, host, function () {
+//先确定host和协议
+    var canonicalHost = host === '0.0.0.0' ? '127.0.0.1' : host,
+        protocol      = ssl ? 'https://' : 'http://';
+//开始log输出咯
+    logger.info([colors.yellow('Starting up http-server, serving '),
+      colors.cyan(server.root),
+      ssl ? (colors.yellow(' through') + colors.cyan(' https')) : '',
+      colors.yellow('\nAvailable on:')
+    ].join(''));
+
+    if (argv.a && host !== '0.0.0.0') {
+      logger.info(('  ' + protocol + canonicalHost + ':' + colors.green(port.toString())));
+    }
+    else {
+      //如果有多张卡
+      Object.keys(ifaces).forEach(function (dev) {
+        ifaces[dev].forEach(function (details) {
+          if (details.family === 'IPv4') {
+            logger.info(('  ' + protocol + details.address + ':' + colors.green(port.toString())));
+          }
+        });
+      });
+    }
+//有没有代理服务器，如果有，反馈
+    if (typeof proxy === 'string') {
+      logger.info('Unhandled requests will be served from: ' + proxy);
+    }
+//
+    logger.info('Hit CTRL-C to stop the server');
+    if (argv.o) {
+      opener(
+        protocol + canonicalHost + ':' + port,
+        { command: argv.o !== true ? argv.o : null }
+      );
+    }
+  });
+}
+//输出
+if (process.platform === 'win32') {
+  require('readline').createInterface({
+    input: process.stdin,
+    output: process.stdout
+  }).on('SIGINT', function () {
+    process.emit('SIGINT');
+  });
+}
+//信号中断，对应ctrl-c
+process.on('SIGINT', function () {
+  logger.info(colors.red('http-server stopped.'));
+  process.exit();
+});
+//对应kill
+process.on('SIGTERM', function () {
+  logger.info(colors.red('http-server stopped.'));
+  process.exit();
+});

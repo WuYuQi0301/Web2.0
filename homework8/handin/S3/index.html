@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>环形按钮</title>
+    <meta charset="utf-8">
+    <link rel="icon" sizes="196x196" href="/S3/images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="/S3/stylesheet/style.css">
+    <script type="text/javascript" src="/S3/index.js"></script>
+    <script type="text/javascript" src="/S3/jQuery/jquery-3.2.1.min.js"></script>
+  </head>
+  <body>
+    <div id="at-plus-container">
+      <!-- 这个容器干嘛用的 -->
+      <div id="bottom-positioner">
+        <div></div>
+        <!-- 用于定位整个元素的容器 -->
+        <div id="button">
+         
+          <div class="apb">
+            <div class="icon"></div>
+          </div>
+
+          <div id="info-bar" class="grey">
+            <div style="display:block" class="info"><!-- 这部分是info box --><p id="sum"></p></div>
+          </div>
+
+          <div id="control-ring-container">
+          <!--这部分是弹出来的小圆-->
+            <ul id="control-ring">
+              <li title="A" class="blue button" id="A">A<span class="Aspan red-dot"></span></li>
+              <li title="B" class="blue button" id="B">B<span class="Bspan red-dot"></span></li>
+              <li title="C" class="blue button" id="C">C<span class="Cspan red-dot"></span></li>
+              <li title="D" class="blue button" id="D">D<span class="Dspan red-dot"></span></li>
+              <li title="E" class="blue button" id="E">E<span class="Espan red-dot"></span></li>
+            </ul>
+          </div>
+          <!-- 这块是原始的icon -->
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

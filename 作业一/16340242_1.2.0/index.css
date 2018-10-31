@@ -1,0 +1,26 @@
+body
+{
+  margin:0px;
+  color:#999;
+  font-weight:bold;
+  padding-top:75px;  
+  /*position:fixed;*/
+  text-align:center;
+	font-family: Garamond, serif;
+	background-image: url("http://img.hb.aicdn.com/b5104934e2acabfac12ffea233a75fdfd1e2d7097f92-XV4xyV_fw658");
+}
+h1
+{
+	letter-spacing: 0.2em;
+  font-family:'Roboto';
+  background-color: #F0F0F0;
+}
+p
+{
+	font-size: 22px;
+}
+#greeting
+{
+	color: #990;
+	font-size: 35px;
+}

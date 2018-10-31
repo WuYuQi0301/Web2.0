@@ -1,0 +1,163 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+
+	background: url("src/background.png");
+	font-size: 8pt;
+	font-family: Verdana, Tahoma, sans-serif;
+}
+
+div#banner
+{
+	text-align: center;
+
+	height: 50px;
+	background: url("src/bannerbackground.png");
+	background-repeat: repeat-x;
+}
+
+h1
+{
+	text-align: center;
+
+	font-size: 24pt;
+	font-weight: bold;
+	font-family: Tahoma, Verdana, sans-serif;
+}
+
+div#overall_content
+{	
+	width: 800px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	overflow: hidden;
+
+	border-width: 4px;
+	border-color: grey;
+	border-style: solid;
+}
+div#left_section
+{
+	width: 550px;
+	position: relative;
+}
+
+div#left_section > div#subhead
+{
+	background: url("src/rottenbackground.png");
+	background-repeat: repeat-x;
+	height: 83px;	
+}
+
+div#left_section > div#subhead >img
+{
+	float: left;
+}
+
+div#left_section > div#subhead > span#percentage
+{
+	position: relative;
+	top: 4px;
+
+	color: red;
+	font-size: 48pt;
+	font-weight: bold;
+}
+div#left_section > div#subhead > span#quantity
+{
+	position: relative;
+	top: 4px;
+	
+	color: white;
+	font-family: standard;
+	font-size: 8pt;
+}
+
+div#right_section
+{
+	float: right;
+	width: 250px;
+
+	background-color: #A2B964;
+	font-size: 8pt;
+	font-family: Arial, sans-serif;
+}
+
+div#right_section > div#info_list
+{
+	padding: 10px;
+}
+
+div#right_section > div#info_list > dl > dt
+{
+	font-weight: bold;
+	margin-top: 1em;
+}
+
+div#overall_content > div#left_section >div#left_column
+{
+	float: left;
+	width: 47%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+div#overall_content > div#left_section > div#right_column
+{
+	float: right;
+	width: 47%;
+	margin-right: 2%;
+}
+
+div.comment
+{
+	margin-bottom: 3em;
+}
+
+div.comment > p.review
+{
+	background-color: #E1D697;
+	border-style: solid;
+	border-width: 2px;
+	border-color: gray;
+	padding: 8px;
+	overflow: hidden;
+}
+
+div.comment > p.review > q
+{
+	font-size: 8pt;
+	font-weight: bold;
+}
+
+div.comment > p.review > img, div.comment > p.reviewer >img
+{
+	float: left;
+	margin-right: 5px;
+}
+
+div.comment > p.reviewer >span
+{
+	font-style: italic;
+}
+
+#bottom
+{
+	clear: right;
+	width: 800px;
+	background-color: #A2B964;
+	text-align: center;
+	vertical-align:top;
+	padding: 5px;
+	margin: 0;
+}
+
+div#link
+{
+	position: fixed;
+    right: 0px;
+    bottom: 0px;
+}

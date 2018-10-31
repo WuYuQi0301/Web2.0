@@ -1,0 +1,156 @@
+@font-face {
+    font-family: myFont;
+    src: url("../font/Weston Free.otf")
+}
+body {
+	background-image: url("../img/background.jpeg");
+	background-repeat: repeat;
+}
+
+#positioner {
+	margin: 0 auto;
+	text-align: center;
+}
+h1 {
+	font-family: myFont;
+	font-size: 35px;
+	font-weight: bolder;
+}
+p {
+	height: 5px;
+	font-size: 16pt;
+	font-family: myFont, serif;
+}
+#difficulty {
+	width: 150px;
+	position: relative;
+	left: 800px;
+	font-weight: bold;
+	font-family: myFont;
+}
+#info {
+	position: relative;
+	font-family: myFont;
+	top: -71px;
+}
+form {
+	width: 40px;
+	position: relative;
+	left: 850px;
+}
+select {
+	width: 40px;
+	height: 25px;
+
+}
+#restart {
+	margin: 0 auto;
+	position: relative;
+	top: -50px;
+	width: 120px;
+	height: 38px;
+	padding-top: 10px;
+
+	background-color: #6296eb;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16pt;
+	letter-spacing: 3px;
+	border-radius: 4px 4px 4px 4px;
+	box-shadow: 0px 0px 20px 3px #6666EB;
+}
+#game_box {
+	margin: 0 auto;
+	position: relative;
+	top: -70px;
+	width: 310px;
+	height: 310px;
+}
+.pieces {
+	width: 100px;
+	height: 100px;
+	border: 1px solid;
+	position: absolute;
+
+	background-image: url("../img/image1.jpeg");
+	border-width: 1px;
+	border-color: grey;
+	z-index: 0;
+
+	transition: all 500ms ease-out;
+	--webkid--transition: all 500ms ease-out;
+}
+.empty {
+	width: 100px;
+	height: 100px;
+	/*border: 1px solid;*/
+}
+.pieces:hover {
+	transform: scale(1.1);
+	--webkid--transform: scale(1.1);
+	transition: 300ms ease-out;
+	--webkid--transition: 300ms ease-out;
+	z-index:1;
+}
+#origin1 {
+	background-position: 0px 0px;
+}
+#origin2 {
+	background-position: -100px 0px;
+}
+#origin3 {
+	background-position: -200px 0px;
+}
+#origin4 {
+	background-position: -0px -100px;
+}
+#origin5 {
+	background-position: -100px -100px;	
+}
+#origin6 {
+	background-position: -200px -100px;
+}
+#origin7 {
+	background-position: 0px -200px;
+}
+#origin8 {
+	background-position: -100px -200px;
+}
+
+.pos1 {
+	left: 0px;
+	top: 0px;
+}
+
+.pos2 {
+	left: 102px;
+	top: 0px;
+}
+.pos3 {
+	left: 204px;
+	top: 0px;
+}
+.pos4 {
+	left: 0px;
+	top: 102px;
+}
+.pos5 {
+	left: 102px;
+	top: 102px;
+}
+.pos6 {
+	left: 204px;
+	top: 102px;
+}
+.pos7 {
+	left: 0px;
+	top: 203px;
+}
+.pos8 {
+	left: 102px;
+	top: 203px;
+}
+.pos9 {
+	left: 204px;
+	top: 203px;
+}

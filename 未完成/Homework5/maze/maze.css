@@ -1,0 +1,179 @@
+#maze{
+  margin: auto;
+  width: 600px;
+  height: 355px;
+  position: relative;
+  top: 15px;
+  /*border:1px solid black;*/
+}
+
+body{
+  font-family: "Verdana", "Tahoma", "sans-serif";
+}
+
+p,h1{
+  text-align: center;
+}
+div{
+  margin: 0;
+  padding: 0px;
+}
+
+.wall ,.changeTemp{
+  background-color: #EEEEEE;
+  display:inline-block;
+}
+
+.path{
+  display: inline;
+  display:inline-block;
+}
+
+#wall1{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  width: 598px;
+  height: 50px;
+}
+
+#wall2{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+  top: -5px;
+  width: 168px;
+  height: 200px;
+}
+
+#path1{
+  border-top: 1px solid black;
+  position: relative;
+  top: -5px;
+  width: 50px;
+  height: 200px;
+}
+
+#path2{
+  border-top: 1px solid black;
+  position: relative;
+  bottom: 155px;
+  width: 150px;
+  height: 50px;
+}
+
+#path3{
+  border-top: 1px solid black;
+  position: relative;
+  top: -5px;
+  width: 50px;
+  height: 200px;
+}
+
+#path4{
+  position: relative;
+  top: -10px;
+  width: 222px;
+  height: 50px;
+}
+
+#path5{
+  position: relative;
+  top: -10px;
+  width: 220px;
+  height: 50px;
+  left: 152px;
+}
+
+#wall3{
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  position: relative;
+  top: -5px;
+  width: 178px;
+  height: 200px;
+}
+
+#wall4{
+  border: 1px solid black;
+  position: relative;
+  top: -15px;
+  width: 598px;
+  height: 50px;
+}
+
+#wall5{
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  position: absolute;
+  top: 100px;
+  left: 220px;
+  width: 150px;
+  height: 198px;
+}
+
+#start{
+  position: absolute;
+  top: 253px;
+  background-color: #88FF88;
+  width: 40px;
+  height:42px;
+  text-align: center;
+}
+
+#end{
+  position: absolute;
+  top: 253px;
+  left: 560px;
+  background-color: #8888FF;
+  width: 40px;
+  vertical-align: text-bottom;
+  height:42px;
+  text-align: center;
+}
+
+#wall_exam{
+  background-color: #EEEEEE;
+  width:80px;
+  height: 20px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.changeTemp{
+  background-color: red;
+}
+
+span{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#tell{
+  transition: all 0.5s;
+}
+
+#tip{
+  position:relative;
+  left:30%;
+}
+
+pre{
+  font-weight: bold;
+}
+
+.luck{
+  position: relative;
+  right: 15%;
+}
+
+#outside{
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 230px;
+  left: 600px;
+}

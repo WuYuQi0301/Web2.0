@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="mole.css" type="text/css">
+  <script src="mole.js"></script>
+  <title>Mole</title>
+</head>
+<body>
+  <h1>Whac-a-mole</h1>
+  <p id="test">Test your skill.How many boxes(moles) can you check(hit) in 30 seconds?</p>
+  <div id="line1">
+    <button id="start-or-stop">Start Game|Stop Game</button>&nbsp;&nbsp;&nbsp;
+    &nbsp;Time: <input type="text" id="time-show" value="0"><br>
+  </div>
+  <div id="timeRunningOut"></div>
+  <div id="line2"><input type="text" id="status-show" value="Waiting">&nbsp;&nbsp;&nbsp;&nbsp;Score: <input type="text" id="score-show" value="0"></div>
+  <div id="game-area">
+    <form action="">
+      <input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><!--
+      --><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•"><input type="radio" class="hole" name="hole-name" value="•">
+  </form>
+  </div>
+  <div id="tip">
+    <p id="tip-tittle">Instructions:</p>
+    <ol>
+      <li>Click on the radio buttons(moles) as they are selected randomly by the computer.</li>
+      <li>1 point per hit, minus 1 point per miss.</li>
+    </ol>  
+    </div>
+</body>
+</html>

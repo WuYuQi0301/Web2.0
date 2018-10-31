@@ -1,0 +1,170 @@
+#container {
+	/*border: solid;*/
+	overflow: hidden;
+	text-align: center;
+}
+h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 28pt;
+	font-weight: normal;
+}
+#text_above {
+	position: relative;
+	font-size: 20pt;
+	font-family: 'Century Gothic', sans-serif;
+}
+#narrator {
+	position: relative;
+	top: -15px;
+
+	height: 1px;
+	font-size: 20pt;
+}
+#text_below {
+	position: relative;
+	left: 390px;
+
+	font-size: 20px;
+	font-family: 'Century Gothic', sans-serif;
+	text-align: left;
+}
+#game_box{
+	/*border: 1px solid;*/
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	height: 310px;
+	width: 502px;
+}
+.wall {
+	background-color: #EEEEEE;
+	border: 1px solid;
+}
+.red {
+	background-color: red;
+	border: 1px solid;
+}
+#mid_top {
+	/*margin: 0 auto;*/
+	position: relative;
+	left: 151px;
+
+	width: 200px;
+	height: 50px;
+	border-right: none;
+	border-left: none;
+
+	position: relative;
+	top: -250px;
+}
+#mid_mid {
+	position: relative;
+	left: 201px;
+	width: 100px;
+	height: 150px;
+	border-bottom: none;
+
+	position: relative;
+	top: -200px;
+}
+#mid_bottom {
+	position: relative;
+	left: 201px;
+	width: 100px;
+	height: 50px;
+	border-top: none;
+	border-left: none;
+	border-right: none; 
+
+	position: relative;
+	top: -200px;
+}
+#left_top {
+	position: relative;
+	top: 4px;
+
+	border-right: none;
+	border-bottom: none;; 
+}
+#left_mid {
+	position: relative;
+	top: 4px;
+
+	border-top: none;
+}
+#left_bottom {
+	position: relative;
+	top: 54px;
+	border-right: none;
+}
+#right_top {
+	position: relative;
+	left: 351px;
+	top: -504px;
+	border-left: none;
+	border-bottom: none;
+}
+#right_mid {
+	position: relative;
+	left: 350px;
+	top: -504px;
+	border-top: none;
+}
+#right_bottom {
+	position: relative;
+	left: 301px;
+	top: -454px;
+	border-left: none;
+}
+#left_top, #right_top {
+	width: 150px;
+	height: 50px;
+}
+#left_mid, #right_mid {
+	width: 150px;
+	height: 150px;
+}
+#left_bottom, #right_bottom {
+	width: 200px;
+	height: 50px;
+}
+
+div#start {
+	position: relative;
+	left: 4px;
+	top: -552px;
+
+	width: 40px;
+	height: 40px;
+	border: 1px solid;
+	background-color: rgb(130, 254, 132);
+	font-size: 22pt;
+	font-weight: bold;
+}
+div#end {
+
+	position: relative;
+	left: 454px;
+	top: -594px;
+
+	width: 40px;
+	height: 40px;
+	border: 1px solid;
+	background-color: rgb(100, 100, 220);
+	font-size: 22pt;
+	font-weight: bold;
+}
+#text_below {
+	position: relative;
+	top: 20px;
+}
+#example_wall {
+	position: relative;
+	left: 230px;
+
+	width:120px;
+	height: 25px;
+	background-color: #EEEEEE;
+	border: 1px solid; 
+}

@@ -1,0 +1,173 @@
+@font-face
+{
+	font-family: myCustom;
+	src: url("font/ericthinnormal.ttf");
+}
+body
+{
+	background: url("pic/background1.png");
+	background-repeat: no-repeat;
+	background-size: 100% 670px;
+   	font-family: myCustom, Arial, sans-serif;
+
+}
+#container
+{
+	padding: 0px;
+	position: relative;
+	width: auto;
+	height: 590px;
+	margin: 0;
+	/*border:2px solid;*/
+}
+
+div#positioner
+{
+	position: relative;
+	bottom: -100px;
+	width: 650px;
+	height: 450px;
+	margin: 0 auto;
+	overflow: hidden;
+
+	background-color: rgba(225, 225, 225, 0.5);
+	border-radius: 7px;
+}
+
+#calculater
+{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-top: 25px;
+		/*border:2px solid;*/
+}
+input
+{
+	font-family: myCustom;
+}
+#inputs
+{	position: relative;
+	right: 4px;
+	text-align: center;
+	margin-top: 10px;
+}
+input#input-box, input#show
+{
+	width: 606px;
+	text-align: right;
+	background-color: rgba(150, 150, 150, 0);
+}
+input#show
+{
+	font-weight: bold;
+	height: 20px;
+	font-size: 23px;
+	color: rgba(80, 80, 80, 1);
+	border: none;
+}
+input#input-box
+{
+	height: 40px;
+	font-size: 35pt;
+	font-weight: bolder;
+	border: none;
+	transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; 
+}
+input#input-box:focus {
+  border: none;
+  outline: 0;
+}
+.label_style_before
+{
+	display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid yellow;
+  height: 0px;
+
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.3s ease;
+}
+input#input-box:focus + label {
+	width: 100%;
+}
+
+.txt_style_before{
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  font-size: 48px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease-in-, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input#input-box:focus + label > span{
+  left: -100px;
+  font-size: 25px;
+  color: rgba(225, 225, 225, 1);
+}
+
+.label_style_after
+{
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border-top: 1px solid yellow;
+  height: 0px;
+}
+.txt_style_after
+{
+ 	font-weight: 300;
+  margin: 0;
+  position: absolute;
+  left: 0px;
+  z-index: -1;
+  top: -100px;
+  font-size: 25px;
+  color: rgba(225, 225, 225, 1);
+  -webkit-transition: top 0.2s ease-in-, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+#btn-container
+{
+	width: 500px;
+	height: 305px;
+	text-align: center;
+}
+table
+{
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-left: -4px;
+}
+.btns
+{
+	font-size: 22pt;
+	width: 151px;
+	height: 55px;
+	border-radius: 5px 5px 5px 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(128, 128, 128, 0.2) inset;
+	border-color: #dedede;
+	background-color: rgba(225, 225, 225, 0.7);
+  transition: all 400ms ease-out;
+  -webkit-transition: all 400ms ease-out;
+}
+.btns:hover {
+	border: none;
+  box-shadow: 0px 20px 20px -10px rgba(25, 25, 25, 1);
+  background-color: rgba(225, 250, 125, 0.8);
+}
+.btns:focus {
+	border: none;
+	outline: 0;
+}

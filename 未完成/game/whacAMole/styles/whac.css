@@ -1,0 +1,111 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	overflow: hidden;
+}
+
+h1 {
+	width: 300px;
+	margin: auto;
+	font-weight: normal;
+	font-size: 35px;
+	margin-top: 30px;
+}
+
+p {
+	width: 1100px;
+	margin: auto;
+	margin-top: 20px;
+	font-size: 30px;
+}
+
+#firstLine, #secondLine {
+	width: 510px;
+	margin: auto;
+	margin-bottom: 10px;
+}
+
+#firstLine span {
+	display: inline-block;
+	margin-left: 200px;
+	font-size: 20px;
+	vertical-align: bottom;
+	line-height: 20px;
+}
+
+#time, #score {
+	height: 20px;
+	width: 40px;
+	border-width: thin;
+	display: inline-block;
+	vertical-align: bottom;
+	box-shadow: 0px 0px 0px 1px gray;
+}
+
+#status {
+	height: 20px;
+	width: 160px;
+	box-shadow: 0px 0px 0px 1px gray;
+	display: inline-block;
+	vertical-align: bottom;
+}
+
+#secondLine span {
+	display: inline-block;
+	margin-left: 197px;
+	font-size: 20px;
+	line-height: 20px;
+	vertical-align: bottom;
+}
+
+#outer {
+	position: absolute;
+	left: 33%;
+	height: 250px;
+	width: 460px;
+	border-style: solid;
+	border-left: none;
+	border-right: none;
+	border-color: gray;
+	margin: auto;
+	margin-top: 30px;
+}
+
+.button {
+	margin-top: 10px;
+	margin-right: 23px;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	box-shadow:0 0 2px 1px gray inset;
+	display: inline-block;
+}
+
+.buttonClick {
+	margin-top: 10px;
+	margin-right: 23px;
+	height: 25px;
+	width: 25px;
+	border-radius: 50%;
+	box-shadow:0 0 0px 9px #0E83F7 inset;
+	display: inline-block;
+}
+
+.button:nth-child(10n) {
+	margin-right: 0;
+}
+
+.buttonClick:nth-child(10n) {
+	margin-right: 0;
+}
+
+#instruction {
+	position: absolute;
+	top: 500px;
+	left: 400px;
+}
+
+
+
+

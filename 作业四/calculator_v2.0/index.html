@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" >
+	<link rel = "Shortcut Icon" href="./favicon/icon1.jpg">
+	<title>Simple Calculator</title>
+</head>
+<body>
+	<script src="event.js"></script>
+	<div id="container">
+		<div id="positioner">
+			<!-- <div id="head"><p>简易计算器</p></div> -->
+			<div id="calculater">
+				<div id="inputs">
+					<input id="show" type="text" readonly>
+					<input id="input-box" type="text" dir='rtl'>
+					<label id="slogen" class="label_style_before"><span class="txt_style_before">DO YOUR MATH!</span></label>
+				</div>
+				<div id="btn-container">
+					<table><tr>
+						<td ><input class="btns" type="button" name="digit" value="7" /></td>
+						<td><input class="btns" type="button" name="digit" value="8" /></td>
+						<td><input class="btns" type="button" name="digit" value="9" /></td>
+						<td><input class="btns" type="button" name="operator" value="/" /></td>
+						</tr>
+						<tr><td><input class="btns" type="button" name="digit" value="4" /></td>
+						<td><input class="btns" type="button" name="digit" value="5" /></td>
+						<td><input class="btns" type="button" name="digit" value="6" /></td>
+						<td><input class="btns" type="button" name="operator" value="*" /></td>
+						</tr>
+						<tr><td><input class="btns" type="button" name="digit" value="1" /></td>
+						<td><input class="btns" type="button" name="digit" value="2" /></td>
+						<td><input class="btns" type="button" name="digit" value="3" /></td>
+						<td><input class="btns" type="button" name="operator" value="-" /></td>
+						</tr>
+						<tr><td><input class="btns" type="button" name="digit" value="0" /></td>
+						<td><input class="btns" type="button" name="operator" value="." /></td>
+						<td><input class="btns" type="button" name="spc-btn" value="&larr;" /></td>
+						<td><input class="btns" type="button" name="operator" value="+" /></td>
+						</tr>
+						<tr><td><input class="btns" type="button" name="operator" value="(" /></td>
+						<td><input class="btns" type="button" name="operator" value=")" /></td>
+						<td><input class="btns" type="button" name="spc-btn" value="CE" /></td>
+						<td><input class="btns" type="button" name="operator" value="=" /></td>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

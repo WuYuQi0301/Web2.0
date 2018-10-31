@@ -1,0 +1,185 @@
+#positioner {
+	margin: 0 auto;
+	text-align: center;;
+}
+h1 {
+	font-weight: bolder;
+}
+p {
+	height: 5px;
+	font-size: 16pt;
+	font-family: serif;
+}
+div#restart {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 120px;
+	height: 38px;
+	padding-top: 10px;
+
+	background-color: #6296eb;
+	text-align: center;
+	color: #ffffff;
+	font-size: 16pt;
+	letter-spacing: 3px;
+}
+#game_box {
+	margin: 0 auto;
+	position: relative;
+	width: 408px;
+	height: 408px;
+	border: none;
+	/*border: 1px solid;*/
+
+
+}
+.pieces {
+	width: 100px;
+	height: 100px;
+	border: 1px solid;
+
+	background-image: url("./img/image1.jpeg");
+	border-width: 1px;
+	border-color: grey;
+	z-index: 0;
+}
+.empty {
+	width: 100px;
+	height: 100px;
+	/*border: 1px solid;*/
+}
+.pieces:hover {
+	transform: scale(1.1);
+	--webkid--transform: scale(1.1);
+	transition: 300ms ease-out;
+	--webkid--transition: 300ms ease-out;
+	z-index:1;
+	/*box-shadow: 0px 5px 5px 5px;*/
+}
+#origin1 {
+	background-position: 0px 0px;
+}
+#origin2 {
+	background-position: -100px 0px;
+}
+#origin3 {
+	background-position: -200px 0px;
+}
+#origin4 {
+	background-position: -300px 0px;
+}
+#origin5 {
+	background-position: 0px -100px;	
+}
+#origin6 {
+	background-position: -100px -100px;
+}
+#origin7 {
+	background-position: -200px -100px;
+}
+#origin8 {
+	background-position: -300px -100px;
+}
+#origin9 {
+	background-position: 0px -200px;
+}
+#origin10 {
+	background-position: -100px -200px;
+}
+#origin11 {
+	background-position: -200px -200px;
+}
+#origin12 {
+	background-position: -300px -200px;
+}
+#origin13 {
+	background-position: 0px -300px;
+}
+#origin14 {
+	background-position: -100px -300px;
+}
+#origin15 {
+	background-position: -200px -300px;
+}
+
+.pos1 {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+.pos2 {
+	position: absolute;
+	left: 102px;
+	top: 0px;
+}
+.pos3 {
+	position: absolute;
+	left: 204px;
+	top: 0px;
+}
+.pos4 {
+	position: absolute;
+	left: 306px;
+	top: 0px;
+}
+.pos5 {
+	position: absolute;
+	left: 0px;
+	top: 102px;
+}
+.pos6 {
+	position: absolute;
+	left: 102px;
+	top: 102px;
+}
+.pos7 {
+	position: absolute;
+	left: 204px;
+	top: 102px;
+}
+.pos8 {
+	position: absolute;
+	left: 306px;
+	top: 102px;
+}
+.pos9 {
+	position: absolute;
+	left: 0px;
+	top: 203px;
+}
+.pos10 {
+	position: absolute;
+	left: 102px;
+	top: 203px;
+}
+.pos11 {
+	position: absolute;
+	left: 204px;
+	top: 203px;
+}
+.pos12 {
+	position: absolute;
+	left: 306px;
+	top: 203px;
+}
+.pos13 {
+	position: absolute;
+	left: 0px;
+	top: 305px;
+}
+.pos14 {
+	position: absolute;
+	left: 102px;
+	top: 305px;
+}
+.pos15 {
+	position: absolute;
+	left: 204px;
+	top: 305px;
+}
+.pos16 {
+		position: absolute;
+	left: 306px;
+	top: 305px;
+}
